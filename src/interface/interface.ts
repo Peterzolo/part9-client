@@ -23,7 +23,13 @@ interface CourseDes extends CoursePartBase {
   description: string;
 }
 
+interface CoursePartExtra extends CourseDes {
+  requirements: ["nodejs", "jest"];
+  kind: "special";
+}
+
 export type CoursePart =
   | CoursePartBasic
   | CoursePartGroup
-  | CoursePartBackground;
+  | CoursePartBackground
+  | CoursePartExtra;
