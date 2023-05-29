@@ -2,8 +2,9 @@ import React from "react";
 import Content from "./components/Content";
 import Header from "./components/Header";
 import Total from "./components/Total";
-import { CoursePart } from "./interface/interface";
+
 import { courseParts } from "./data";
+import { CoursePart } from "./interface/interface";
 
 const courseName: string = "Half Stack application development";
 

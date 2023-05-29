@@ -1,20 +1,12 @@
 import React from "react";
-import { CoursePart } from "../interface/interface";
 import ContentItem from "./ContentItem";
+import { CoursePart } from "../interface/interface";
 
-interface IContent {
-  courseParts: CoursePart[];
-}
-
-const Content: React.FC<IContent> = ({ courseParts }) => {
+const Content: React.FC<{ courseParts: CoursePart[] }> = ({ courseParts }) => {
   return (
     <div>
       {courseParts.map((coursePart, index) => (
-        <ContentItem
-          key={index}
-          name={coursePart.name}
-          exerciseCount={coursePart.exerciseCount}
-        />
+        <ContentItem key={index} coursePart={coursePart} />
       ))}
     </div>
   );
