@@ -1,5 +1,6 @@
 import React from "react";
 import { CoursePart } from "../interface/interface";
+import Part from "./Part";
 
 interface IContentItem {
   coursePart: CoursePart;
@@ -21,6 +22,7 @@ const ContentItem: React.FC<IContentItem> = ({ coursePart }) => {
       <p>Name: {name}</p>
       <p>Exercise Count: {exerciseCount}</p>
       {additionalInfo && <p>{additionalInfo}</p>}
+      <Part coursePart={coursePart} />
     </div>
   );
 };
